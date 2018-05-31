@@ -1,0 +1,45 @@
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+========== RESTART: C:\Users\leopan\Desktop\Metaglotistes\runner.py ==========
+Issued ommand: 
+id = (( (False and True) or 1 )) #
+Command output: 
+>>> id
+1
+>>> 
+========== RESTART: C:\Users\leopan\Desktop\Metaglotistes\runner.py ==========
+Issued ommand: 
+print (( (False and True) or 0 )) #
+Command output: 
+0
+>>> 
+========== RESTART: C:\Users\leopan\Desktop\Metaglotistes\runner.py ==========
+Parser Error: In rule AndExpresion: not, (, var, true, 1, 0, false, t, or f is expected at line 1 char 21
+Issued ommand: 
+print (( (False and and True) or 0 )) #
+Command output: 
+Traceback (most recent call last):
+  File "C:\Users\leopan\Desktop\Metaglotistes\runner.py", line 256, in <module>
+    exec(open("input_boolean.txt").read())
+  File "<string>", line 1
+    print (( (False and and True) or 0 )) #
+                          ^
+SyntaxError: invalid syntax
+>>> 
+========== RESTART: C:\Users\leopan\Desktop\Metaglotistes\runner.py ==========
+Issued ommand: 
+print (( (False and True) or f )) #
+Command output: 
+Traceback (most recent call last):
+  File "C:\Users\leopan\Desktop\Metaglotistes\runner.py", line 256, in <module>
+    exec(open("input_boolean.txt").read())
+  File "<string>", line 1, in <module>
+NameError: name 'f' is not defined
+>>> 
+========== RESTART: C:\Users\leopan\Desktop\Metaglotistes\runner.py ==========
+Issued ommand: 
+print (( (False and True) or False )) #
+Command output: 
+False
+>>> 
